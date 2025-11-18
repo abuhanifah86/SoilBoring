@@ -1,0 +1,4 @@
+BoreholeID,ProjectName,SiteName,Latitude,Longitude,GroundElevation_mRL,StartDate,EndDate,DrillingMethod,BoreholeDiameter_mm,TotalDepth_m,CasingInstalled_mm,GroundwaterDepth_m,GroundwaterEncountered,Contractor,LoggingGeologist,SPTHammerType,Remarks
+BH-01,Proyek Jalan Layang Timur,Zona A,-6.176,106.865,8.5,2025-10-12,2025-10-13,Wash Boring + SPT,150,30.0,100,2.8,True,PT GeoBore,R. Santoso,Standard 63.5 kg,Permukaan beraspal; traffic control diperlukan
+BH-02,Proyek Jalan Layang Timur,Zona B,-6.1772,106.8671,9.1,2025-10-13,2025-10-14,Rotary Wash + SPT,150,25.0,100,3.4,True,PT GeoBore,R. Santoso,Standard 63.5 kg,Utilitas bawah tanah terdeteksi (pipa)
+BH-03,Proyek Jalan Layang Timur,Zona C,-6.1785,106.8645,7.9,2025-10-14,2025-10-15,Wash Boring + SPT,150,20.0,100,4.1,True,PT GeoBore,R. Santoso,Standard 63.5 kg,Tanah permukaan gembur; perlu stabilisasi

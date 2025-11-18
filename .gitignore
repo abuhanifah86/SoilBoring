@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+.venv/
+venv/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Data
+data/*.csv
+
+# Env
+.env
+frontend/.env.local
+frontend/.env
+backend/.env
