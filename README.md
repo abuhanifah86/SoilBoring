@@ -164,3 +164,9 @@ Config you may want to set:
 - `VITE_API_URL` build-arg (defaults to `/api`)
 
 Data persistence: `./data` on the host is bind-mounted into the backend container at `/app/data` so reports/users survive restarts.
+
+### Deployment notes (latest changes)
+- Frontend now defaults to calling `/api` when `VITE_API_URL` is unset; rebuild frontend if you change this.
+- Backend redirects any `/api/api/*` requests to `/api/*` to tolerate stale caches.
+- AI/Ollama is optional. If you run Ollama on the host, set `OLLAMA_URL=http://host.docker.internal:11434/api/chat` (or your host IP) in `docker-compose.yml` and restart the backend. If Ollama is not reachable, AI endpoints return a friendly “AI service unavailable” message instead of failing.
+- If you prefer containerized Ollama, add an `ollama` service to `docker-compose.yml` and point `OLLAMA_URL` to `http://ollama:11434/api/chat`; mount a volume for models so downloads persist.
