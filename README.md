@@ -144,3 +144,23 @@ data/
 - Set `DATA_DIR` to an external volume to keep field logs on shared storage.
 - Harden production: set a strong `AUTH_TOKEN_SECRET`, adjust `AUTH_TOKEN_TTL`, and review CORS before exposing beyond localhost.
 - Override `OLLAMA_MODEL`/`OLLAMA_URL` to plug in your own model or hosted AI endpoint.
+
+---
+
+### Docker (single VM)
+
+Build and run the full stack behind one port (frontend at `/`, backend at `/api`):
+
+```bash
+# from repo root
+docker compose build
+docker compose up -d
+```
+
+Config you may want to set:
+- `AUTH_TOKEN_SECRET` (required in prod)
+- `AUTH_TOKEN_TTL` (seconds, default 28800)
+- `OLLAMA_URL` (if using AI summaries/QA)
+- `VITE_API_URL` build-arg (defaults to `/api`)
+
+Data persistence: `./data` on the host is bind-mounted into the backend container at `/app/data` so reports/users survive restarts.
