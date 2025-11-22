@@ -9,7 +9,7 @@ services:
       DATA_DIR: /app/data
       AUTH_TOKEN_SECRET: ${AUTH_TOKEN_SECRET:-change-me-please}
       AUTH_TOKEN_TTL: ${AUTH_TOKEN_TTL:-28800}
-      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434/api/chat}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434/api/chat}
     volumes:
       - ./data:/app/data
     expose:
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        VITE_API_URL: ${VITE_API_URL:-/api}
+        VITE_API_URL: ${VITE_API_URL:-}
     ports:
       - "80:80"
     depends_on:
