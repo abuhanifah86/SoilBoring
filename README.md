@@ -6,6 +6,8 @@ Comprehensive borehole logging with AI-assisted narratives and dashboards. The s
 - **Frontend:** React + Vite (TypeScript)
 - **Data:** `data/reports.csv` ships with 123 synthetic 2024 borehole logs following a typical geotechnical schema.
 
+![Login flow](docs/assets/login.gif)
+
 ---
 
 ### Quick Start (fast path)
